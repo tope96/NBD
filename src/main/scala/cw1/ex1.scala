@@ -1,5 +1,6 @@
 package cw1
 
+
 import scala.collection.mutable.ListBuffer
 
 object ex1 {
@@ -14,6 +15,7 @@ object ex1 {
 
     print("c) ")
     println(getDaysWithWhile(days))
+
   }
 
   def getDays(myList: List[Any]): String = {
@@ -36,7 +38,7 @@ object ex1 {
     var daysStartsOnP = new ListBuffer[String]()
     if(myList.nonEmpty){
       for(element<-myList){
-        if(element.take(1) == "P") {
+        if(element.startsWith("P")) {
           daysStartsOnP += element
         }
       }
