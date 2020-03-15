@@ -12,7 +12,6 @@ object ex8 {
     if (h == n)
       removeZ(t, n)
     else
-    println(h)
       h :: removeZ(t, n)
   }
 }

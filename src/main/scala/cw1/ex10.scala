@@ -7,6 +7,6 @@ object ex10 {
   }
 
   def absoluteValue(list: List[Int]):List[Int]={
-    return list.filter(x => -5 <= x && x <= 12).map(a => a.abs)
+    list.filter(x => -5 <= x && x <= 12).map(a => a.abs)
   }
 }

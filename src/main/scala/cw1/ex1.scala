@@ -55,7 +55,7 @@ object ex1 {
       var iterator = 0
       var separator = ", "
 
-      while(iterator<listLength){
+      while(iterator < listLength){
         if(iterator == listLength-1){
           separator = ""
         }

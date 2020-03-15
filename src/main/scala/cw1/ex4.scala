@@ -15,18 +15,15 @@ object ex4 {
   }
 
   def left(myList: List[String]): String={
-    val stringList = myList.tail.foldLeft(myList.head)((a, b) => a+ ", " + b )
-    return stringList
+    myList.tail.foldLeft(myList.head)((a, b) => a + ", " + b )
   }
 
   def right(myList: List[String]): String={
-    val stringList = myList.foldRight("")((a, b) => a + ", " + b )
-    return stringList
+    myList.foldRight("")((a, b) => if (b.isEmpty) a else a + ", " + b)
   }
 
   def leftWithP(myList: List[String]): String={
-    val stringList = myList.tail.foldLeft(myList.head) { (element, input) => if (input.startsWith("P")) element + ", " + input  else element }
-    return stringList
+    myList.tail.foldLeft(myList.head) { (element, input) => if (input.startsWith("P")) element + ", " + input  else element }
   }
 
 
