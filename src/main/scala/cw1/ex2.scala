@@ -22,14 +22,8 @@ object ex2 {
     return ""
   }
 
-  def getDaysReverse(myList:List[String]):String={
-    var separator = ", "
-    if(myList.nonEmpty) {
-      if(myList.tail.isEmpty){
-        separator = ""
-      }
-      return myList.reverse.head + separator + getDays(myList.reverse.tail)
-    }
-    return ""
+  def getDaysReverse(myList:List[String]):String= myList match{
+    case myList: List[String] if myList.tail.isEmpty => myList.head
+    case _ => getDaysReverse(myList.tail) + ", " + myList.head
   }
 }

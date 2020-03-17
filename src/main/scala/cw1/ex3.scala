@@ -4,17 +4,15 @@ object ex3 {
   def main(args: Array[String]):Unit={
     val days: List[String] = List("Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota", "Niedziela")
 
-    print(getDays(days))
+    print("a) ")
+    println(getDays(days, ""))
   }
 
-  def getDays(myList:List[String]):String={
-    var separator = ", "
-    if(myList.nonEmpty) {
-      if(myList.tail.isEmpty){
-        separator = ""
-      }
-      return myList.head + separator + getDays(myList.tail)
-    }
-    return ""
+  def getDays(list: List[String], text: String): String = list match {
+    case Nil => ""
+    case h :: t =>
+      if (t.isEmpty) text + ", " + h
+      else if (text.isEmpty) getDays(t, h)
+      else getDays(t, text + ", " + h)
   }
 }
