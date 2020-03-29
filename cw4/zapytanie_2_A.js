@@ -3,7 +3,7 @@ printjson(db.people.aggregate(
 	{
 		$group: {
 			_id: "$credit.currency",
-			sumBalance: {$sum: {$toDouble:"$credit.balance"}}
+			sumBalance: {$sum: "$credit.balance"}
 		}
 	}
 ).toArray())

@@ -3,9 +3,9 @@ printjson(
         [{
                 $addFields: {
                     BMI: {
-                        $divide: [{$toDouble:"$weight"}, {
+                        $divide: ["$weight", {
                             $pow: [{
-                                $divide: [{$toDouble:"$height"}, 100]
+                                $divide: ["$height", 100]
                             }, 2]
                         }]
                     }
