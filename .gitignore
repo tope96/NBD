@@ -1,3 +1,6 @@
 scala.iml
 .idea/
 out/
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/Scala/v16/.suo

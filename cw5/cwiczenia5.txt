@@ -1,3 +1,8 @@
 1. MATCH (m:Movie) return m
 2. MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavingMovies) RETURN hugo,hugoWeavingMovies
 3. MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavingMovies)<-[:DIRECTED]-(hugoDirectors) RETURN hugoWeavingMovies, hugoDirectors
+4. MATCH (hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coActors) RETURN coActors.name
+5. MATCH (movie:Movie)<-[:ACTED_IN]-(person:Person)-[relatedTo]->(movie1:Movie) WHERE movie.title CONTAINS "Matrix" RETURN  movie1, person, relatedTo
+6. MATCH (person:Person)-[:ACTED_IN]->(movie) RETURN person, COUNT(*)
+7. MATCH (person:Person)-[:WROTE]->(movie)<-[:DIRECTED]-(person) RETURN person, movie
+8. MATCH (keanu:Person {name: "Keanu Reeves"})-[:ACTED_IN]->(movies)<-[:ACTED_IN]-(hugo:Person {name: "Hugo Weaving"}) return keanu, hugo, movies
