@@ -16,4 +16,4 @@ CREATE
 (evans)-[:ACTED_IN {roles:['Captain America']}]->(avengers),
 (hayley)-[:ACTED_IN {roles:['Peggy Carter']}]->(avengers),
 (joe)-[:DIRECTED]->(avengers),
-(markus)-[:WROTE]->(avengers),
+(markus)-[:WROTE]->(avengers)

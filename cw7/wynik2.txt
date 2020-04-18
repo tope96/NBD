@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fmbZV90CspkymBIZ81gZepbx3+DLAgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s13696>; rel="up"
+Last-Modified: Sat, 18 Apr 2020 16:27:56 GMT
+ETag: "7V5S9WY6ubEoszo9P3DRVS"
+Date: Sat, 18 Apr 2020 16:28:57 GMT
+Content-Type: application/json
+Content-Length: 68
+
+{"brand": "Bugatti", "name": "Chiron", year: 2017, "color": "Black"}

@@ -1,0 +1,16 @@
+1.
+curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Ferrari", "name": "TestaRossa", year: 1984, "color": "Red"}' http://localhost:8098/buckets/s13696/keys/car1
+curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Aston Martin", "name": "DB11", year: 2011, "color": "Silver"}' http://localhost:8098/buckets/s13696/keys/car2
+curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Rolls-Royce", "name": "Phantom", year: 1931, "color": "Green"}' http://localhost:8098/buckets/s13696/keys/car3
+curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Bugatti", "name": "Chiron", year: 2017, "color": "Black"}' http://localhost:8098/buckets/s13696/keys/car4
+curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Fiat", "name": "126p", year: 1972, "color": "Meteor"}' http://localhost:8098/buckets/s13696/keys/car5
+
+2. curil -i http://localhost:8098/buckets/s13696/keys/car4
+3. curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Ferrari", "name": "TestaRossa", year: 1984, "color": "Red", horsepower: 390}' http://localhost:8098/buckets/s13696/keys/car1
+4. curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Fiat", "name": "126p", year: 1972}' http://localhost:8098/buckets/s13696/keys/car5
+5. curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Bugatti", "name": "Chiron", year: 2017, "color": "White"}' http://localhost:8098/buckets/s13696/keys/car4
+6. curl -i -XDELETE -H "Content-Type: application/json" http://localhost:8098/buckets/s13696/keys/car5
+7. curl -i http://localhost:8098/buckets/s13696/keys/car5
+8. curl -i -H "Content-Type: application/json" -d '{"brand": "Opel"}' http://localhost:8098/buckets/s13696/keys
+9. curl -i http://localhost:8098/buckets/s13696/keys/L2j3FERM6slh9xeoigUECjPtFpY
+10. curl -i -XDELETE -H "Content-Type: application/json" http://localhost:8098/buckets/s13696/keys/L2j3FERM6slh9xeoigUECjPtFpY
