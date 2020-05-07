@@ -5,7 +5,7 @@ curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Rolls-Royce", "
 curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Bugatti", "name": "Chiron", year: 2017, "color": "Black"}' http://localhost:8098/buckets/s13696/keys/car4
 curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Fiat", "name": "126p", year: 1972, "color": "Meteor"}' http://localhost:8098/buckets/s13696/keys/car5
 
-2. curil -i http://localhost:8098/buckets/s13696/keys/car4
+2. curl -i http://localhost:8098/buckets/s13696/keys/car4
 3. curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Ferrari", "name": "TestaRossa", year: 1984, "color": "Red", horsepower: 390}' http://localhost:8098/buckets/s13696/keys/car1
 4. curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Fiat", "name": "126p", year: 1972}' http://localhost:8098/buckets/s13696/keys/car5
 5. curl -i -XPUT -H "Content-Type: application/json" -d '{"brand": "Bugatti", "name": "Chiron", year: 2017, "color": "White"}' http://localhost:8098/buckets/s13696/keys/car4
