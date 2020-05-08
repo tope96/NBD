@@ -4,7 +4,7 @@ package cw1
 import scala.collection.mutable.ListBuffer
 
 object ex1 {
-  def main(args: Array[String])={
+  def main(args: Array[String]):Unit={
     val days: List[String] = List("Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota", "Niedziela")
 
     print("a) ")
@@ -31,7 +31,7 @@ object ex1 {
         iterator += 1
       }
     }
-    return text
+    text
   }
 
   def getDaysStartsWithP(myList: List[String]): String ={
@@ -42,9 +42,9 @@ object ex1 {
           daysStartsOnP += element
         }
       }
-      return daysStartsOnP.mkString(", ")
+      daysStartsOnP.mkString(", ")
     }else{
-      return ""
+      ""
     }
   }
 
@@ -63,7 +63,7 @@ object ex1 {
         iterator += 1
       }
     }
-    return text
+    text
   }
 
 }
