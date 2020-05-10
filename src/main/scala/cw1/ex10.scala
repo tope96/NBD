@@ -2,7 +2,7 @@ package cw1
 
 object ex10 {
   def main(args: Array[String]):Unit={
-    val list: List[Int] = List(1, 2, 3, 4, -3, -10)
+    val list: List[Int] = List(1, 2, 3, 4, -3, -10, 13)
     print(absoluteValue(list))
   }
 
