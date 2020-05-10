@@ -19,7 +19,7 @@ db.people.mapReduce(
         finalize: function maths(key, value){
             var balance = {avgBalance: 0, total: 0}
 
-            balance.avgBalance = value.balance/vavaluel.count,
+            balance.avgBalance = value.balance/value.count,
             balance.total = value.balance
 
             return balance
