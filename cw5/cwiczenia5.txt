@@ -17,3 +17,5 @@ CREATE
 (hayley)-[:ACTED_IN {roles:['Peggy Carter']}]->(avengers),
 (joe)-[:DIRECTED]->(avengers),
 (markus)-[:WROTE]->(avengers)
+
+MATCH (movie:Movie {title: "Captain America: The First Avenger"})<-[relatedTo]-(person:Person) return movie, person
