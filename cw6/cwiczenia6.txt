@@ -1,0 +1,21 @@
+Czesc 1:
+1. MATCH (town1 {name:"Darjeeling"}),(town2 {name:"Sandakphu"}), path=allShortestPaths((town1)-[*]-(town2)) RETURN path
+2. 
+MATCH (town1 {name:"Darjeeling"}),(town2 {name:"Sandakphu"}), path=allShortestPaths((town1)-[relation*]-(town2))
+WHERE ALL(x IN relation WHERE x.winter="true")
+RETURN path
+3. MATCH (town1 {name:"Darjeeling"}),(town2 {name:"Sandakphu"}), path = allShortestPaths((town1)-[*]-(town2)) RETURN path ORDER BY length(path) ASC
+4. MATCH (airport:Airport)<-[:ORIGIN]-(flight:Flight) RETURN airport, COUNT(flight) ORDER BY COUNT(flight)
+5. 
+MATCH (startAirport:Airport)<-[:ORIGIN]-(flight)-[:DESTINATION]->(endAirport:Airport), (flight)<-[:ASSIGN]-(ticket)
+CREATE (startAirport)-[:CONNECTION {price: ticket.price}]->(endAirport)
+
+MATCH trip = (Airport { name:"LAX" })-[:CONNECTION*]->(airports)
+	WITH airports, relationships(trip) AS trip
+	WHERE REDUCE(accumulator = 0, a IN trip|accumulator + a.price) < 3000
+	RETURN DISTINCT airports
+
+6.
+MATCH (start:Airport { name:"LAX" }), (end: Airport {name:'DAY'}), trip = (start)-[:CONNECTION*]->(end)
+	WITH trip, relationships(trip) AS conn
+	return trip, REDUCE(price = 0, conn IN conn | price + conn.price) AS price ORDER BY price
