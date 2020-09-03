@@ -1,4 +1,4 @@
-# Nonrelational databases (Scala, MongoDB, Neo4j, Riak)
+# Nonrelational databases (MongoDB, Neo4j, Riak)
 
 Exercises from "nonrelational databases" course at Polish Japanese Institute of Information Technology in Warsaw.
 
